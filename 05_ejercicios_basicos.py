@@ -70,3 +70,51 @@ area_total = area_triang(base, altura)
 print(area_total)
 
 # 8. Crea una función que, dado un número, verifique si un número es positivo, negativo o cero.
+def valor_num(numero):
+  if numero > 0:
+    return "El número es positivo"
+  elif numero < 0:
+    return "El número es negativo"
+  else:
+    return "El número es 0"
+ejemplo_valor = 4
+resultado_valor = valor_num(ejemplo_valor)
+print(resultado_valor)
+
+# 9. Crea una función que, dada una palabra, cuente la cantidad de letras en una palabra.
+def contar_letras(palabra):
+  cantidad_total = len(palabra)
+  return cantidad_total
+ejemplo_palabra = "Holaquetal"
+resultado_ejemplo_palabra = contar_letras(ejemplo_palabra)
+print(resultado_ejemplo_palabra)
+
+# 10. Crea una función que, dada una lista de números, convierta la lista de números a su valor absoluto.
+def absoluto(lista):
+  lista_absoluta = [abs(numero) for numero in lista]
+  return lista_absoluta
+ejemplo_lista = [4,-29,30,40,-115]
+resultado_lista_absoluta = absoluto(ejemplo_lista)
+print(resultado_lista_absoluta)
+
+# 11. Crea una función que, dado un número, verifique si un número es primo.
+def primo(numero):
+  if numero <= 1:
+    return False
+  for i in range(2, int(numero**0.5) + 1):
+    if numero % i == 0:
+      return False
+  return True
+ejemplo_primo = 4
+resultado_primo = primo(ejemplo_primo)
+print(resultado_primo)
+
+# 12. Dados dos números, crea una función para encontrar el máximo común divisor (MCD) de esos dos números
+def calculo_mcd(numA, numB):
+  while numB:
+    numA, numB = numB, numA % numB
+  return abs(numA)
+numA = 12
+numB = 2
+resultado_mcd = calculo_mcd(numA, numB)
+print(resultado_mcd)
