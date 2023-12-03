@@ -127,6 +127,41 @@ ejemplo_ascendente = [5,7,2,8,0,32,1]
 ascendente(ejemplo_ascendente)
 print(f"La lista ordenada es: {ejemplo_ascendente}")
 # 14. Ejercicio: Define una función que reciba una lista de palabras y un entero n, y retorne la lista de palabras que son más largas que n.
+def palabra_mas_larga_n(lista, n):
+ palabras = [palabra for palabra in lista if len(palabra) > n]
+ return palabras
+ejemplo_lista = ["python", "javascript", "react", "HTML", "CSS", "bucle", "variable", "funciones"]
+n = 5
+resultado_palabra_larga = palabra_mas_larga_n(ejemplo_lista, n)
+print(resultado_palabra_larga)
 # 15. Ejercicio: Define una función que tome un número y calcule su serie de Fibonacci.
+def fibonacci(numero):
+ if numero <= 0:
+  return "Número mayor a 0"
+ elif numero == 1:
+  return [0]
+ else:
+  serie_fibonacci = [0, 1]
+  while len(serie_fibonacci) < n:
+   serie_fibonacci.append(serie_fibonacci[-1] + serie_fibonacci[-2])
+  return serie_fibonacci
+ejemplo_fibonacci_cadena = 5
+resultado_fibonacci = fibonacci(ejemplo_fibonacci_cadena)
+print(resultado_fibonacci)
 # 16. Ejercicio: Define una función que tome una lista de números y retorne el número más grande de la lista.
+def numero_mas_grande(lista):
+ if not lista:
+  return "Lista vacía"
+ maximo = max(lista)
+ return maximo
+lista_numeros = [14,3,45,68,4,3]
+resultado_numero = numero_mas_grande(lista_numeros)
+print(resultado_numero)
 # 17. Ejercicio: Define una función que reciba un número y retorne la suma de sus dígitos al cubo.
+def suma_al_cubo(numero):
+ numero_string = str(numero)
+ suma = sum(int(digito) ** 3 for digito in numero_string)
+ return suma
+ejemplo_suma_cubo = 22
+resultado_cubo = suma_al_cubo(ejemplo_suma_cubo)
+print(resultado_cubo)
